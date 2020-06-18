@@ -121,6 +121,6 @@ Feedstock Maintainers
 * [@danielballan](https://github.com/danielballan/)
 * [@ericdill](https://github.com/ericdill/)
 * [@jakirkham](https://github.com/jakirkham/)
-* [@licode](https://github.com/licode/)
+* [@nkeim](https://github.com/nkeim/)
 * [@tacaswell](https://github.com/tacaswell/)
 
