@@ -1,5 +1,5 @@
 {% set name = "PIMS" %}
-{% set version = "0.4.1" %}
+{% set version = "0.5" %}
 
 package:
   name: {{ name|lower }}
@@ -8,12 +8,12 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6a53a155e900b44e71127a1e1fccbfbaed7eec3c2b52497c40c23a05f334c9dd
+  sha256: a02cdcbb153e2792042fb0bae7df4f30878bbba1f2d176114a87ee0dc18715a0
 
 build:
-  number: 2
+  number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -60,8 +60,7 @@ about:
   license: BSD-3-Clause
   license_file: license.txt
   summary: >
-      Python Image Sequence. Load video and sequential images in many formats
-      with a simple, consistent interface.
+    Python Image Sequence. Load video and sequential images in many formats with a simple, consistent interface.
 
 extra:
   recipe-maintainers:
