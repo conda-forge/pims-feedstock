@@ -11,7 +11,7 @@ source:
   sha256: a02cdcbb153e2792042fb0bae7df4f30878bbba1f2d176114a87ee0dc18715a0
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -29,7 +29,7 @@ requirements:
     - jinja2
     - pillow
 # The following dependencies are optional (for specific readers)
-    - matplotlib  # one of { scikit-image | matplotlib }
+    - matplotlib-base  # one of { scikit-image | matplotlib-base }
     - tifffile
 
 test:
