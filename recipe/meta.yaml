@@ -23,14 +23,13 @@ requirements:
   run:
     - python
     - slicerator >=0.9.7
-    - six >=1.8
-    - numpy >=1.7
-# The following dependencies are only required for rich IPython display
+    - {{ pin_compatible('numpy') }}
+    - numpy >=1.17
+    # The following dependencies are only required for rich IPython display
     - jinja2
     - pillow
-# The following dependencies are optional (for specific readers)
-    - matplotlib-base  # one of { scikit-image | matplotlib-base }
     - tifffile
+    - imageio
 
 test:
   imports:
