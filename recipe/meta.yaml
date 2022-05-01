@@ -1,5 +1,5 @@
 {% set name = "PIMS" %}
-{% set version = "0.5" %}
+{% set version = "0.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,10 +8,10 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a02cdcbb153e2792042fb0bae7df4f30878bbba1f2d176114a87ee0dc18715a0
+  sha256: 1102742d642c8b8acc710d35d502b5d7085ee1288c3618373ef8c472030bc683
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
