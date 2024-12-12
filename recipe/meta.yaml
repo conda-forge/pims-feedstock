@@ -7,21 +7,21 @@ package:
 
 source:
   fn: {{ name|lower }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name|lower }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name|lower }}-{{ version }}.tar.gz
   sha256: 55907a4c301256086d2aa4e34a5361b9109f24e375c2071e1117b9491e82946b
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
 
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - slicerator >=1.1.0
     - {{ pin_compatible('numpy') }}
     - numpy >=1.19
@@ -33,6 +33,8 @@ requirements:
     - imageio
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - pims
     - pims.api
